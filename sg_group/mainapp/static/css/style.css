@@ -1,0 +1,112 @@
+body {
+  min-width: 320px;
+  margin: 0;
+  font-family: sans-serif;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  background: url('../img/bg.jpg') no-repeat center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+.main_hidden {
+  opacity: 0;
+}
+.main__block {
+  padding: 100px 200px 50px 200px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.main__block_hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.main__block_upped {
+  transform: translateY(-5px);
+}
+.main__gears {
+  position: relative;
+  width: 235px;
+  height: 185px;
+}
+.main__gear {
+  position: absolute;
+}
+.main__gear_1 {
+  animation: gear_rotate_right 5s linear infinite;
+  top: 65px;
+  left: 0;
+  height: 150px;
+}
+.main__gear_2 {
+  animation: gear_rotate_left 3s linear infinite;
+  top: 0;
+  right: 0;
+  height: 110px;
+}
+.main__gear_3 {
+  animation: gear_rotate_right 2s linear infinite;
+  bottom: 0;
+  right: 0;
+  height: 70px;
+}
+.main__text {
+  text-align: center;
+  color: #333333;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+.main__logo {
+  height: 100px;
+}
+@keyframes gear_rotate_right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes gear_rotate_left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@media screen and (max-width: 800px) {
+  .main__block {
+    padding: 50px 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main {
+    background: url('../img/bg_mobile.jpg') no-repeat center / cover;
+  }
+  .main__block {
+    padding: 50px 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main__block {
+    padding: 50px 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+/*# sourceMappingURL=style.css.map */
