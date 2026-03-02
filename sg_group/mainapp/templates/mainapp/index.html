@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="main main_hidden" id="main">
+    <div class="main__block main__block_hidden" id="block">
+        <div class="main__gears">
+            <img class="main__gear main__gear_1" src="{% static 'img/gear.svg' %}" alt="gear">
+            <img class="main__gear main__gear_2" src="{% static 'img/gear.svg' %}" alt="gear">
+            <img class="main__gear main__gear_3" src="{% static 'img/gear.svg' %}" alt="gear">
+        </div>
+        <p class="main__text">Сайт находится в разработке</p>
+        <img class="main__logo" src="{% static 'img/logo.png' %}" alt="sg group">
+    </div>
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
