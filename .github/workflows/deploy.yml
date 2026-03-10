@@ -23,7 +23,7 @@ jobs:
       - name: CI check
         run: |
           pip install -r requirements.txt
-          cd sggroup
+          cd sg_group
           python manage.py check
 
       - name: Deploy
@@ -33,12 +33,12 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/sggroup
+            cd /home/sg_group
             git fetch
             git pull
             source venv/bin/activate
             pip install -r requirements.txt
-            cd sggroup
+            cd sg_group
             python manage.py migrate
             sudo systemctl restart nginx
             sudo systemctl restart sggroup.uz
